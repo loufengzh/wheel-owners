@@ -1,0 +1,37 @@
+name: tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[test]'
+      - run: python -m pytest
+      - run: python -m build
+      - run: |
+          python -m venv /tmp/wheel-owners-smoke
+          /tmp/wheel-owners-smoke/bin/python -m pip install dist/*.whl
+          python examples/make_demo.py
+          project="$PWD"
+          cd /tmp
+          /tmp/wheel-owners-smoke/bin/wheel-owners --version
+          /tmp/wheel-owners-smoke/bin/wheel-owners --layout "$project/examples/posix-layout.json" \
+            "$project/examples/generated/namespace_a-1.0-py3-none-any.whl" \
+            "$project/examples/generated/namespace_b-1.0-py3-none-any.whl" > clean.json
+          cmp clean.json "$project/examples/clean-report.json"
+          set +e
+          /tmp/wheel-owners-smoke/bin/wheel-owners --layout "$project/examples/posix-layout.json" \
+            "$project/examples/generated/alpha-1.0-py3-none-any.whl" \
+            "$project/examples/generated/beta-1.0-py3-none-any.whl" > conflict.json
+          status=$?
+          set -e
+          test "$status" -eq 1
+          cmp conflict.json "$project/examples/conflict-report.json"

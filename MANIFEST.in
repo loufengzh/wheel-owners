@@ -1,0 +1,6 @@
+include LICENSE README.md CONTRIBUTING.md SECURITY.md
+recursive-include docs *.md
+recursive-include examples *.py *.json
+recursive-exclude examples/generated *
+recursive-include tests *.py
+include .github/workflows/ci.yml

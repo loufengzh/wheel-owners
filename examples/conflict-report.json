@@ -1,0 +1,275 @@
+{
+  "claims": [
+    {
+      "distribution": "alpha",
+      "executable": true,
+      "kind": "generated-console",
+      "path": "/venv/bin/acme",
+      "relative_path": "acme",
+      "scheme": "scripts",
+      "sha256": "799c1f613b7abe79686975518a4534cc5815849234f9dcab31ab77606f9becdf",
+      "size": 210,
+      "source": "acme = acme.common:main",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "beta",
+      "executable": true,
+      "kind": "generated-console",
+      "path": "/venv/bin/acme",
+      "relative_path": "acme",
+      "scheme": "scripts",
+      "sha256": "815c6b520b8b772744b4ef2465022b3c9f2cc6f98b755ca13a4744fe0c3ce6e5",
+      "size": 207,
+      "source": "acme = beta.cli:main",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "alpha",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/acme/common.py",
+      "relative_path": "acme/common.py",
+      "scheme": "purelib",
+      "sha256": "56a31c83c8e570d8752baacf331978d53234251b8de297eeeb2fcb83dec51138",
+      "size": 16,
+      "source": "acme/common.py",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "beta",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/acme/common.py",
+      "relative_path": "acme/common.py",
+      "scheme": "purelib",
+      "sha256": "7274b4547e24f0a29100453c9271663ce8d66a85433a0152a981222cb43b52b9",
+      "size": 15,
+      "source": "beta-1.0.data/purelib/acme/common.py",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "alpha",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/alpha-1.0.dist-info/METADATA",
+      "relative_path": "alpha-1.0.dist-info/METADATA",
+      "scheme": "purelib",
+      "sha256": "5a44165a6b594e11c4f75f69a145fbedbf02b38a1cb98e51817d99a21a09b583",
+      "size": 47,
+      "source": "alpha-1.0.dist-info/METADATA",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "alpha",
+      "executable": false,
+      "kind": "generated-record",
+      "path": "/venv/lib/python3.12/site-packages/alpha-1.0.dist-info/RECORD",
+      "relative_path": "alpha-1.0.dist-info/RECORD",
+      "scheme": "purelib",
+      "sha256": "882ecdeb6a9c87acb1619a3939cc130070f52873c97256bf0f7000c1a603ea9a",
+      "size": 425,
+      "source": "alpha-1.0.dist-info/RECORD",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "alpha",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/alpha-1.0.dist-info/WHEEL",
+      "relative_path": "alpha-1.0.dist-info/WHEEL",
+      "scheme": "purelib",
+      "sha256": "242557f73f15fa3b36695e6a9904761377e20acf98bb7bcf3bdd5c08198ed493",
+      "size": 59,
+      "source": "alpha-1.0.dist-info/WHEEL",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "alpha",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/alpha-1.0.dist-info/entry_points.txt",
+      "relative_path": "alpha-1.0.dist-info/entry_points.txt",
+      "scheme": "purelib",
+      "sha256": "bddc54067a129ea0025bd745c723c76cc474ffe78eff8ae270043a8eb82151de",
+      "size": 42,
+      "source": "alpha-1.0.dist-info/entry_points.txt",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "beta",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/beta-1.0.dist-info/METADATA",
+      "relative_path": "beta-1.0.dist-info/METADATA",
+      "scheme": "purelib",
+      "sha256": "231b1b1c5a33d7c86f9087cdd0de5685835ab0b84d953c1cfb2831bd15d9c952",
+      "size": 46,
+      "source": "beta-1.0.dist-info/METADATA",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "beta",
+      "executable": false,
+      "kind": "generated-record",
+      "path": "/venv/lib/python3.12/site-packages/beta-1.0.dist-info/RECORD",
+      "relative_path": "beta-1.0.dist-info/RECORD",
+      "scheme": "purelib",
+      "sha256": "a2606deb0380a68fedc040769671c5a34ffc20b5028a81398929188b64a065a9",
+      "size": 421,
+      "source": "beta-1.0.dist-info/RECORD",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "beta",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/beta-1.0.dist-info/WHEEL",
+      "relative_path": "beta-1.0.dist-info/WHEEL",
+      "scheme": "purelib",
+      "sha256": "242557f73f15fa3b36695e6a9904761377e20acf98bb7bcf3bdd5c08198ed493",
+      "size": 59,
+      "source": "beta-1.0.dist-info/WHEEL",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "beta",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/beta-1.0.dist-info/entry_points.txt",
+      "relative_path": "beta-1.0.dist-info/entry_points.txt",
+      "scheme": "purelib",
+      "sha256": "54513d839782b391eccbee2637fc5437727239b4ced09d718277c4becfd2f03b",
+      "size": 39,
+      "source": "beta-1.0.dist-info/entry_points.txt",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    }
+  ],
+  "conflicts": [
+    {
+      "claims": [
+        {
+          "distribution": "alpha",
+          "executable": true,
+          "kind": "generated-console",
+          "path": "/venv/bin/acme",
+          "relative_path": "acme",
+          "scheme": "scripts",
+          "sha256": "799c1f613b7abe79686975518a4534cc5815849234f9dcab31ab77606f9becdf",
+          "size": 210,
+          "source": "acme = acme.common:main",
+          "version": "1.0",
+          "wheel": "alpha-1.0-py3-none-any.whl"
+        },
+        {
+          "distribution": "beta",
+          "executable": true,
+          "kind": "generated-console",
+          "path": "/venv/bin/acme",
+          "relative_path": "acme",
+          "scheme": "scripts",
+          "sha256": "815c6b520b8b772744b4ef2465022b3c9f2cc6f98b755ca13a4744fe0c3ce6e5",
+          "size": 207,
+          "source": "acme = beta.cli:main",
+          "version": "1.0",
+          "wheel": "beta-1.0-py3-none-any.whl"
+        }
+      ],
+      "command_overlap": true,
+      "content": "different",
+      "path": "/venv/bin/acme",
+      "type": "shared-file"
+    },
+    {
+      "claims": [
+        {
+          "distribution": "alpha",
+          "executable": false,
+          "kind": "file",
+          "path": "/venv/lib/python3.12/site-packages/acme/common.py",
+          "relative_path": "acme/common.py",
+          "scheme": "purelib",
+          "sha256": "56a31c83c8e570d8752baacf331978d53234251b8de297eeeb2fcb83dec51138",
+          "size": 16,
+          "source": "acme/common.py",
+          "version": "1.0",
+          "wheel": "alpha-1.0-py3-none-any.whl"
+        },
+        {
+          "distribution": "beta",
+          "executable": false,
+          "kind": "file",
+          "path": "/venv/lib/python3.12/site-packages/acme/common.py",
+          "relative_path": "acme/common.py",
+          "scheme": "purelib",
+          "sha256": "7274b4547e24f0a29100453c9271663ce8d66a85433a0152a981222cb43b52b9",
+          "size": 15,
+          "source": "beta-1.0.data/purelib/acme/common.py",
+          "version": "1.0",
+          "wheel": "beta-1.0-py3-none-any.whl"
+        }
+      ],
+      "command_overlap": false,
+      "content": "different",
+      "path": "/venv/lib/python3.12/site-packages/acme/common.py",
+      "type": "shared-file"
+    }
+  ],
+  "errors": [],
+  "layout": {
+    "interpreter": "/venv/bin/python",
+    "profile": "posix-case-sensitive-v1",
+    "scheme": {
+      "data": "/venv",
+      "headers": "/venv/include",
+      "platlib": "/venv/lib/python3.12/site-packages",
+      "purelib": "/venv/lib/python3.12/site-packages",
+      "scripts": "/venv/bin"
+    }
+  },
+  "limits": {
+    "archive_bytes": 67108864,
+    "layout_bytes": 16384,
+    "member_bytes": 67108864,
+    "metadata_bytes": 2097152,
+    "path_bytes": 4096,
+    "path_depth": 64,
+    "report_bytes": 16777216,
+    "report_claim_references": 50000,
+    "set_archive_bytes": 268435456,
+    "set_entries": 20000,
+    "set_uncompressed_bytes": 536870912,
+    "wheel_entries": 10000,
+    "wheel_uncompressed_bytes": 268435456,
+    "wheels": 64
+  },
+  "profile": "posix-case-sensitive-v1",
+  "schema_version": 1,
+  "status": "conflict",
+  "wheels": [
+    {
+      "archive_sha256": "0be04a03195f3067e6d5d69c04f5fe918a2defd22e8dbde3abdb1a1744b17a8f",
+      "distribution": "alpha",
+      "version": "1.0",
+      "wheel": "alpha-1.0-py3-none-any.whl"
+    },
+    {
+      "archive_sha256": "fef760f6ccf876befc608aef3575f505d438d3c4ae43c4992ec5b13d31028e96",
+      "distribution": "beta",
+      "version": "1.0",
+      "wheel": "beta-1.0-py3-none-any.whl"
+    }
+  ]
+}

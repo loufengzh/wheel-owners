@@ -1,0 +1,11 @@
+{
+  "profile": "posix-case-sensitive-v1",
+  "interpreter": "/venv/bin/python",
+  "scheme": {
+    "purelib": "/venv/lib/python3.12/site-packages",
+    "platlib": "/venv/lib/python3.12/site-packages",
+    "scripts": "/venv/bin",
+    "headers": "/venv/include",
+    "data": "/venv"
+  }
+}

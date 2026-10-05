@@ -1,0 +1,154 @@
+{
+  "claims": [
+    {
+      "distribution": "namespace-a",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/acme/a.py",
+      "relative_path": "acme/a.py",
+      "scheme": "purelib",
+      "sha256": "dbc211028788ba35c2813f69bdae8251c91e272bb03ce0bcafacbbc512c97064",
+      "size": 12,
+      "source": "acme/a.py",
+      "version": "1.0",
+      "wheel": "namespace_a-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-b",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/acme/b.py",
+      "relative_path": "acme/b.py",
+      "scheme": "purelib",
+      "sha256": "3ccc4cefbaf73db6b696c4a089f9d99c593fb9397b5ad45f4047e5c4daecdee3",
+      "size": 12,
+      "source": "acme/b.py",
+      "version": "1.0",
+      "wheel": "namespace_b-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-a",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/namespace_a-1.0.dist-info/METADATA",
+      "relative_path": "namespace_a-1.0.dist-info/METADATA",
+      "scheme": "purelib",
+      "sha256": "b0ae6ddba17bd21b2feb5ccec7da240c4c5de615e23b513f760a96a7820a2372",
+      "size": 53,
+      "source": "namespace_a-1.0.dist-info/METADATA",
+      "version": "1.0",
+      "wheel": "namespace_a-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-a",
+      "executable": false,
+      "kind": "generated-record",
+      "path": "/venv/lib/python3.12/site-packages/namespace_a-1.0.dist-info/RECORD",
+      "relative_path": "namespace_a-1.0.dist-info/RECORD",
+      "scheme": "purelib",
+      "sha256": "8d03bcb32b6189c726a43c07e65d0d28889cdc661bec6d15a63cfc74d56f8b66",
+      "size": 274,
+      "source": "namespace_a-1.0.dist-info/RECORD",
+      "version": "1.0",
+      "wheel": "namespace_a-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-a",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/namespace_a-1.0.dist-info/WHEEL",
+      "relative_path": "namespace_a-1.0.dist-info/WHEEL",
+      "scheme": "purelib",
+      "sha256": "242557f73f15fa3b36695e6a9904761377e20acf98bb7bcf3bdd5c08198ed493",
+      "size": 59,
+      "source": "namespace_a-1.0.dist-info/WHEEL",
+      "version": "1.0",
+      "wheel": "namespace_a-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-b",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/namespace_b-1.0.dist-info/METADATA",
+      "relative_path": "namespace_b-1.0.dist-info/METADATA",
+      "scheme": "purelib",
+      "sha256": "0c43e2d5ce322664a83f389c8a8116466d8df6d52fd0a3f0442b736dae823b40",
+      "size": 53,
+      "source": "namespace_b-1.0.dist-info/METADATA",
+      "version": "1.0",
+      "wheel": "namespace_b-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-b",
+      "executable": false,
+      "kind": "generated-record",
+      "path": "/venv/lib/python3.12/site-packages/namespace_b-1.0.dist-info/RECORD",
+      "relative_path": "namespace_b-1.0.dist-info/RECORD",
+      "scheme": "purelib",
+      "sha256": "ca7c3f0eb75e8d7f39ab05cb6f852a792af6cbb3e7991edd6adcc9c4d353b0f0",
+      "size": 274,
+      "source": "namespace_b-1.0.dist-info/RECORD",
+      "version": "1.0",
+      "wheel": "namespace_b-1.0-py3-none-any.whl"
+    },
+    {
+      "distribution": "namespace-b",
+      "executable": false,
+      "kind": "file",
+      "path": "/venv/lib/python3.12/site-packages/namespace_b-1.0.dist-info/WHEEL",
+      "relative_path": "namespace_b-1.0.dist-info/WHEEL",
+      "scheme": "purelib",
+      "sha256": "242557f73f15fa3b36695e6a9904761377e20acf98bb7bcf3bdd5c08198ed493",
+      "size": 59,
+      "source": "namespace_b-1.0.dist-info/WHEEL",
+      "version": "1.0",
+      "wheel": "namespace_b-1.0-py3-none-any.whl"
+    }
+  ],
+  "conflicts": [],
+  "errors": [],
+  "layout": {
+    "interpreter": "/venv/bin/python",
+    "profile": "posix-case-sensitive-v1",
+    "scheme": {
+      "data": "/venv",
+      "headers": "/venv/include",
+      "platlib": "/venv/lib/python3.12/site-packages",
+      "purelib": "/venv/lib/python3.12/site-packages",
+      "scripts": "/venv/bin"
+    }
+  },
+  "limits": {
+    "archive_bytes": 67108864,
+    "layout_bytes": 16384,
+    "member_bytes": 67108864,
+    "metadata_bytes": 2097152,
+    "path_bytes": 4096,
+    "path_depth": 64,
+    "report_bytes": 16777216,
+    "report_claim_references": 50000,
+    "set_archive_bytes": 268435456,
+    "set_entries": 20000,
+    "set_uncompressed_bytes": 536870912,
+    "wheel_entries": 10000,
+    "wheel_uncompressed_bytes": 268435456,
+    "wheels": 64
+  },
+  "profile": "posix-case-sensitive-v1",
+  "schema_version": 1,
+  "status": "clean",
+  "wheels": [
+    {
+      "archive_sha256": "9ff3bf2dd5f8330362ba3418552e0f5084530496abc8a2bccc66615fcaf1184d",
+      "distribution": "namespace-a",
+      "version": "1.0",
+      "wheel": "namespace_a-1.0-py3-none-any.whl"
+    },
+    {
+      "archive_sha256": "2edf027523fdfe744f7e058ac60d99ce8421db0e9b285bc838f71e2e3b944154",
+      "distribution": "namespace-b",
+      "version": "1.0",
+      "wheel": "namespace_b-1.0-py3-none-any.whl"
+    }
+  ]
+}
