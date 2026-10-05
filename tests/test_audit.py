@@ -104,8 +104,19 @@ def test_normalized_distribution_duplicates(tmp_path, layout, other):
 
 @pytest.mark.parametrize("path", ["../escape", "/absolute", "a/../b", "a/./b", "a//b", "a\\b", "a\x00tail", "a\nb", "a/" * 65 + "b"])
 def test_reject_bad_member_paths(tmp_path, layout, path):
-    a = make_wheel(tmp_path, files={path: b"x"})
-    assert audit([a], layout)["status"] == "invalid"
+    # Python 3.10's CSV writer cannot produce NUL-containing fields, and
+    # ZipInfo truncates NUL names. Inject the malformed name into both raw
+    # ZIP headers so every supported Python exercises the actual validator.
+    fixture_path = "aXtail" if "\x00" in path else path
+    a = make_wheel(tmp_path, files={fixture_path: b"x"})
+    if "\x00" in path:
+        data = a.read_bytes()
+        assert data.count(b"aXtail") == 2
+        a.write_bytes(data.replace(b"aXtail", b"a\x00tail"))
+    report = audit([a], layout)
+    assert report["status"] == "invalid"
+    if "\x00" in path:
+        assert "truncated ZIP member name" in str(report["errors"])
 
 
 @pytest.mark.parametrize("path", ["alpha-1.0.datax/x", "alpha-1.0.data/x/x", "alpha-1.0.data/scripts", "other-1.0.data/data/x", "alpha-1.0.dist-info.extra/x"])
