@@ -116,3 +116,5 @@ Für den Build muss `build` in der Entwicklungsumgebung installiert sein.
 Siehe [Mitwirken](../CONTRIBUTING.md), [Sicherheit](../SECURITY.md)
 und [MIT-Lizenz](../LICENSE). Der ausführliche Vertrag steht im
 [englischen README](../README.md).
+
+Komprimierte Wheel-Tags werden vor der Expansion begrenzt: höchstens 10.000 Kombinationsversuche im Dateinamen und unabhängig davon insgesamt 10.000 über alle `Tag`-Header der `WHEEL`-Datei pro Wheel. Wiederholte Teil-Tags und Header zählen vor der Deduplizierung. Eine Überschreitung ergibt `invalid`, kein sauberes Ergebnis; dies ist eine Eingabegrenze, keine Sicherheits-Sandbox-Garantie.

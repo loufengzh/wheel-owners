@@ -152,3 +152,5 @@ If the build frontend is not installed, install `build` in your development
 environment first. See [CONTRIBUTING.md](CONTRIBUTING.md) for scope and review
 expectations, [SECURITY.md](SECURITY.md) for reporting guidance, and
 [LICENSE](LICENSE) for the MIT license.
+
+Compressed wheel tags are resource-bounded before expansion: at most 10,000 combination attempts in the filename and, separately, 10,000 across all `WHEEL` `Tag` headers per wheel. Repeated subtags and headers count before deduplication. Exceeding either budget returns `invalid`, not a clean result; this is a supported-input limit, not a security-sandbox guarantee.

@@ -251,6 +251,7 @@
     "set_archive_bytes": 268435456,
     "set_entries": 20000,
     "set_uncompressed_bytes": 536870912,
+    "tag_combinations": 10000,
     "wheel_entries": 10000,
     "wheel_uncompressed_bytes": 268435456,
     "wheels": 64

@@ -31,11 +31,18 @@ The parser also has fixed limits:
 | Expanded content per wheel / entire set | 256 MiB / 512 MiB |
 | Archive entries per wheel / entire set | 10,000 / 20,000 |
 | Individual `.dist-info` member | 2 MiB |
+| Compressed tag combination attempts: filename / all WHEEL Tag headers per wheel | 10,000 / 10,000 |
 | Layout JSON | 16 KiB |
 | Path / path component (UTF-8) | 4,096 bytes / 255 bytes |
 | Components per path | 64 |
 | Serialized JSON report (including final newline) | 16 MiB |
 | Claim references across report/conflicts | 50,000 |
+
+Compressed tag Cartesian products are counted before expansion. The filename
+and the aggregate of all `WHEEL` `Tag` headers have separate budgets; repeated
+subtags and repeated headers count before deduplication. This bounds expansion
+work, not just the final unique tag set. All header counts are preflighted before
+any header tag expansion.
 
 Generated console/GUI commands count toward the entry limits as well.
 The central-directory count and record boundaries are checked before constructing

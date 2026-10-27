@@ -40,6 +40,7 @@ LIMITS = {
     "archive_bytes": 64 * 1024 * 1024,
     "member_bytes": 64 * 1024 * 1024,
     "metadata_bytes": 2 * 1024 * 1024,
+    "tag_combinations": 10000,
     "wheel_uncompressed_bytes": 256 * 1024 * 1024,
     "set_uncompressed_bytes": 512 * 1024 * 1024,
     "set_archive_bytes": 256 * 1024 * 1024,
@@ -237,7 +238,29 @@ class TrackingWheel(WheelFile):
             yield record, stream, executable
 
 
+def _tag_combinations(tag: str) -> int:
+    """Count parse_tag's Cartesian work without creating any Tag objects.
+
+    Count duplicates too: packaging creates objects before its set deduplicates
+    them. A short compressed tag can otherwise expand into millions of objects.
+    """
+    parts = tag.split("-")
+    if len(parts) != 3:
+        _fail("malformed compatibility tag")
+    count = 1
+    for part in parts:
+        count *= part.count(".") + 1
+    return count
+
+
 def _validate_wheel(source: TrackingWheel, archive: zipfile.ZipFile, name: str) -> tuple[str, str, int, int]:
+    # packaging.parse_wheel_filename itself expands the filename's compressed
+    # tag. Guard its valid filename shape before calling it; leave other filename
+    # validation to packaging. The filename and WHEEL have independent budgets.
+    if name.endswith(".whl") and name.count("-") in (4, 5):
+        filename_tag = name[:-4].rsplit("-", 3)[1:]
+        if _tag_combinations("-".join(filename_tag)) > LIMITS["tag_combinations"]:
+            _fail("filename tag combination limit exceeded")
     distribution, version, _, filename_tags = parse_wheel_filename(name)
     entries = archive.infolist()
     if len(entries) > LIMITS["wheel_entries"]:
@@ -303,9 +326,15 @@ def _validate_wheel(source: TrackingWheel, archive: zipfile.ZipFile, name: str) 
         _fail("only Wheel-Version 1.0 is supported")
     if _one(wheel, "Root-Is-Purelib") not in ("true", "false"):
         _fail("Root-Is-Purelib must be true or false")
+    tag_headers = [str(tag) for tag in wheel.get_all("Tag", [])]
+    combinations = 0
+    for tag in tag_headers:
+        combinations += _tag_combinations(tag)
+        if combinations > LIMITS["tag_combinations"]:
+            _fail("WHEEL tag combination limit exceeded")
     tags = set()
-    for tag in wheel.get_all("Tag", []):
-        tags.update(parse_tag(str(tag)))
+    for tag in tag_headers:
+        tags.update(parse_tag(tag))
     if tags != filename_tags:
         _fail("WHEEL Tag values must match the filename tags")
     metadata = _metadata(archive.read(required[0]), "METADATA")
